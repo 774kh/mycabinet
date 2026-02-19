@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резюме</title>
+    <style>
+        /* Общие стили */
+        :root {
+            --primary: #2563eb;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --text: #334155;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: var(--light);
+            color: var(--text);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .resume-card {
+            max-width: 850px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+        }
+
+        /* Шапка */
+        header {
+            background: var(--dark);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: -1px;
+        }
+
+        .subtitle {
+            color: var(--primary);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            margin-top: 5px;
+            display: block;
+        }
+
+        /* Контент */
+        .content {
+            padding: 40px;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+        }
+
+        h3 {
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .section { margin-bottom: 30px; }
+
+        /* Навыки */
+        .skills-tag {
+            display: inline-block;
+            background: #e2e8f0;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin: 0 5px 8px 0;
+            font-weight: 500;
+        }
+
+        /* Защита (твой стиль) */
+        .protected-notice {
+            font-size: 0.8rem;
+            color: #94a3b8;
+            font-style: italic;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .content { grid-template-columns: 1fr; }
+        }
+    </style>
+    <script>
+        function notcopy() {
+            alert("Контент защищен авторским правом разработчика.");
+            return false;
+        }
+    </script>
+</head>
+<body oncopy="return notcopy()">
+
+    <div class="resume-card">
+        <header>
+            <h1>ТВОЕ ИМЯ</h1>
+            <span class="subtitle">Frontend Developer</span>
+        </header>
+
+        <div class="content">
+            <aside>
+                <div class="section">
+                    <h3>Мои Контакты 992 92 976 76 00</h3>
+                    <p>📍Таджикистан, Худжанд</p>
+                    <p>📧 khabibullop@gmail.com</p>
+                    <p>🔗 github.com/yourlink</p>
+                </div>
+
+                <div class="section">
+                    <h3>Навыки</h3>
+                    <div class="skills-tag">HTML5</div>
+                    <div class="skills-tag">CSS3</div>
+                    <div class="skills-tag">JavaScript</div>
+                    <div class="skills-tag">VS Code</div>
+                    <div class="skills-tag">Git</div>
+                </div>
+            </aside>
+
+            <main>
+                <div class="section">
+                    <h3>О себе</h3>
+                    <p>Занимаюсь разработкой интерфейсов и экспериментирую с безопасностью веб-страниц. Люблю чистый код и минималистичный дизайн. Постоянно изучаю новые возможности JS и CSS.</p>
+                </div>
+
+                <div class="section">
+<h3>Опыт / Проекты</h3>
+                    <p><strong>Разработка систем защиты контента</strong><br>
+                    Реализация скриптов для предотвращения копирования данных через обработчики событий JavaScript.</p>
+                    
+                    <p><strong>Создание адаптивных лендингов</strong><br>
+                    Проектирование интерфейсов, которые одинаково хорошо выглядят на ПК и смартфонах.</p>
+                </div>
+
+                <div class="protected-notice">
+                    * Попытка копирования текста вызовет срабатывание системы защиты.
+                </div>
+            </main>
+        </div>
+    </div>
+
+</body>
+</html>
